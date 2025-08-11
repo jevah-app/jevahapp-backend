@@ -1,0 +1,46 @@
+2025-08-11 08:17:33 [ERROR]: uncaughtException: GOOGLE_GEMINI_API_KEY is required
+Error: GOOGLE_GEMINI_API_KEY is required
+    at new AIChatbotService (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:23:19)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:298:19)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js:17:45)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14) {"error":{},"exception":true,"date":"Mon Aug 11 2025 08:17:33 GMT+0100 (West Africa Standard Time)","process":{"pid":15831,"uid":501,"gid":20,"cwd":"/Users/user/Desktop/jevah-app_backend","execPath":"/Users/user/.nvm/versions/node/v20.18.1/bin/node","version":"v20.18.1","argv":["/Users/user/.nvm/versions/node/v20.18.1/bin/node","/Users/user/Desktop/jevah-app_backend/dist/index.js"],"memoryUsage":{"rss":98574336,"heapTotal":63582208,"heapUsed":39516176,"external":21486827,"arrayBuffers":18313648}},"os":{"loadavg":[304.3388671875,217.63134765625,241.97216796875],"uptime":354771},"trace":[{"column":19,"file":"/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js","function":"new AIChatbotService","line":23,"method":null,"native":false},{"column":19,"file":"/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js","function":null,"line":298,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1469,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1548,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1288,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":1104,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1311,"method":"require","native":false},{"column":18,"file":"node:internal/modules/helpers","function":"require","line":179,"method":null,"native":false},{"column":45,"file":"/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js","function":null,"line":17,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1469,"method":"_compile","native":false}]}
+Error: GOOGLE_GEMINI_API_KEY is required
+    at new AIChatbotService (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:23:19)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:298:19)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js:17:45)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+2025-08-11 08:18:22 [ERROR]: uncaughtException: GOOGLE_GEMINI_API_KEY is required
+Error: GOOGLE_GEMINI_API_KEY is required
+    at new AIChatbotService (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:23:19)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:298:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js:17:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14) {"error":{},"exception":true,"date":"Mon Aug 11 2025 08:18:22 GMT+0100 (West Africa Standard Time)","process":{"pid":16382,"uid":501,"gid":20,"cwd":"/Users/user/Desktop/jevah-app_backend","execPath":"/usr/local/bin/node","version":"v20.13.1","argv":["/usr/local/bin/node","/Users/user/Desktop/jevah-app_backend/dist/index.js"],"memoryUsage":{"rss":94998528,"heapTotal":63823872,"heapUsed":39376488,"external":21455310,"arrayBuffers":18320455}},"os":{"loadavg":[321.7744140625,235.35302734375,247.11669921875],"uptime":354820},"trace":[{"column":19,"file":"/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js","function":"new AIChatbotService","line":23,"method":null,"native":false},{"column":19,"file":"/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js","function":null,"line":298,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1358,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1416,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1208,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":1024,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1233,"method":"require","native":false},{"column":18,"file":"node:internal/modules/helpers","function":"require","line":179,"method":null,"native":false},{"column":45,"file":"/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js","function":null,"line":17,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1358,"method":"_compile","native":false}]}
+Error: GOOGLE_GEMINI_API_KEY is required
+    at new AIChatbotService (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:23:19)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/service/aiChatbot.service.js:298:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/user/Desktop/jevah-app_backend/dist/controllers/aiChatbot.controller.js:17:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)

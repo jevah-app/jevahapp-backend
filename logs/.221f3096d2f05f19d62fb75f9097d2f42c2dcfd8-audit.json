@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/user/Desktop/jevah-app/logs/.221f3096d2f05f19d62fb75f9097d2f42c2dcfd8-audit.json",
+    "files": [
+        {
+            "date": 1754800174895,
+            "name": "/Users/user/Desktop/jevah-app/logs/exceptions-2025-08-10.log",
+            "hash": "751f8e41f930be090219adcb06593d5eebe904a04b43ee743395cbacae644922"
+        }
+    ],
+    "hashType": "sha256"
+}

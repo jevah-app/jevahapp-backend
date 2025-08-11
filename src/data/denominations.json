@@ -1,0 +1,254 @@
+[
+  {
+    "name": "The Redeemed Christian Church of God",
+    "shortName": "RCCG",
+    "type": "Pentecostal",
+    "hq": "Redemption Camp, Lagos-Ibadan Expressway"
+  },
+  {
+    "name": "Living Faith Church Worldwide",
+    "shortName": "Winners Chapel",
+    "type": "Pentecostal",
+    "hq": "Faith Tabernacle, Ota, Ogun"
+  },
+  {
+    "name": "Christ Embassy",
+    "shortName": "LoveWorld",
+    "type": "Charismatic",
+    "hq": "Oregun, Lagos"
+  },
+  {
+    "name": "Deeper Life Bible Church",
+    "shortName": "DLBC",
+    "type": "Evangelical",
+    "hq": "Gbagada, Lagos"
+  },
+  {
+    "name": "Christ Apostolic Church",
+    "shortName": "CAC",
+    "type": "Pentecostal",
+    "hq": "Ibadan, Oyo"
+  },
+  {
+    "name": "Mountain of Fire and Miracles Ministries",
+    "shortName": "MFM",
+    "type": "Pentecostal",
+    "hq": "Yaba, Lagos"
+  },
+  {
+    "name": "Foursquare Gospel Church Nigeria",
+    "shortName": "Foursquare",
+    "type": "Evangelical",
+    "hq": "Yaba, Lagos"
+  },
+  {
+    "name": "House on the Rock",
+    "shortName": "HOTR",
+    "type": "Charismatic",
+    "hq": "Lekki, Lagos"
+  },
+  {
+    "name": "Daystar Christian Centre",
+    "shortName": "Daystar",
+    "type": "Charismatic",
+    "hq": "Oregun, Lagos"
+  },
+  {
+    "name": "Dunamis International Gospel Centre",
+    "shortName": "Dunamis",
+    "type": "Pentecostal",
+    "hq": "Glory Dome, Abuja"
+  },
+  {
+    "name": "The Apostolic Church Nigeria",
+    "shortName": "TACN",
+    "type": "Pentecostal",
+    "hq": "Olorunda, Lagos"
+  },
+  {
+    "name": "The Lord’s Chosen Charismatic Revival Movement",
+    "shortName": "The Lord’s Chosen",
+    "type": "Charismatic",
+    "hq": "Ijesha, Lagos"
+  },
+  {
+    "name": "Salvation Ministries",
+    "shortName": "Salvation Ministries",
+    "type": "Pentecostal",
+    "hq": "Port Harcourt, Rivers"
+  },
+  {
+    "name": "Omega Fire Ministries",
+    "shortName": "OFM",
+    "type": "Pentecostal",
+    "hq": "Auchi, Edo"
+  },
+  {
+    "name": "Christ Life Church",
+    "shortName": "CLC",
+    "type": "Charismatic",
+    "hq": "Ibadan, Oyo"
+  },
+  {
+    "name": "Assemblies of God Nigeria",
+    "shortName": "Assemblies of God",
+    "type": "Evangelical",
+    "hq": "Enugu, Enugu State"
+  },
+  {
+    "name": "New Covenant Church",
+    "shortName": "NCC",
+    "type": "Evangelical",
+    "hq": "Lagos"
+  },
+  {
+    "name": "Word of Life Bible Church",
+    "shortName": "Word of Life",
+    "type": "Pentecostal",
+    "hq": "Warri, Delta"
+  },
+  {
+    "name": "Elevation Church",
+    "shortName": "TEC",
+    "type": "Charismatic",
+    "hq": "Lekki, Lagos"
+  },
+  {
+    "name": "Harvesters International Christian Centre",
+    "shortName": "Harvesters",
+    "type": "Charismatic",
+    "hq": "Gbagada, Lagos"
+  },
+  {
+    "name": "Guiding Light Assembly",
+    "shortName": "GLA",
+    "type": "Charismatic",
+    "hq": "Ikoyi, Lagos"
+  },
+  {
+    "name": "The Covenant Nation",
+    "shortName": "TCN",
+    "type": "Charismatic",
+    "hq": "Iganmu, Lagos"
+  },
+  {
+    "name": "Roman Catholic Church Nigeria",
+    "shortName": "Catholic",
+    "type": "Orthodox",
+    "hq": "Lagos"
+  },
+  {
+    "name": "Church of Nigeria (Anglican Communion)",
+    "shortName": "Anglican",
+    "type": "Orthodox",
+    "hq": "Abuja"
+  },
+  {
+    "name": "Evangelical Church Winning All",
+    "shortName": "ECWA",
+    "type": "Evangelical",
+    "hq": "Jos, Plateau"
+  },
+  {
+    "name": "Living Faith Foundation",
+    "shortName": "LFF",
+    "type": "Pentecostal",
+    "hq": "Ibadan"
+  },
+  {
+    "name": "Christ Holy Church International",
+    "shortName": "Nation Builders",
+    "type": "Charismatic",
+    "hq": "Onitsha, Anambra"
+  },
+  {
+    "name": "Redeemed Evangelical Mission",
+    "shortName": "TREM",
+    "type": "Evangelical",
+    "hq": "Gbagada, Lagos"
+  },
+  {
+    "name": "Dominion City",
+    "shortName": "Dominion City",
+    "type": "Charismatic",
+    "hq": "Enugu"
+  },
+  {
+    "name": "Spirit and Life Bible Church",
+    "shortName": "SLBC",
+    "type": "Pentecostal",
+    "hq": "Benin, Edo"
+  },
+  {
+    "name": "Glorious Liberty Church",
+    "shortName": "GLC",
+    "type": "Charismatic",
+    "hq": "Abuja"
+  },
+  {
+    "name": "The New",
+    "shortName": "The New",
+    "type": "Modern/Charismatic",
+    "hq": "Lekki, Lagos"
+  },
+  {
+    "name": "Celebration Church International",
+    "shortName": "CCI",
+    "type": "Youth-Oriented",
+    "hq": "Lagos"
+  },
+  {
+    "name": "This Present House",
+    "shortName": "TPH",
+    "type": "Charismatic",
+    "hq": "Lekki, Lagos"
+  },
+  {
+    "name": "David Christian Centre",
+    "shortName": "DCC",
+    "type": "Charismatic",
+    "hq": "Amuwo Odofin, Lagos"
+  },
+  {
+    "name": "Global Impact Church",
+    "shortName": "GIC",
+    "type": "Charismatic",
+    "hq": "Surulere, Lagos"
+  },
+  {
+    "name": "Freedom House Church",
+    "shortName": "Freedom House",
+    "type": "Charismatic",
+    "hq": "Benin, Edo"
+  },
+  {
+    "name": "House of Freedom",
+    "shortName": "HOF",
+    "type": "Charismatic",
+    "hq": "Lagos"
+  },
+  {
+    "name": "Greater Evangelism World Crusade",
+    "shortName": "GEWC",
+    "type": "Evangelical",
+    "hq": "Port Harcourt"
+  },
+  {
+    "name": "God’s Kingdom Society",
+    "shortName": "GKS",
+    "type": "Evangelical",
+    "hq": "Warri, Delta"
+  },
+  {
+    "name": "Faith Revival Ministries",
+    "shortName": "FRM",
+    "type": "Pentecostal",
+    "hq": "Lagos"
+  },
+  {
+    "name": "Rhema Chapel International Churches",
+    "shortName": "Rhema",
+    "type": "Evangelical",
+    "hq": "Ilorin, Kwara"
+  }
+]

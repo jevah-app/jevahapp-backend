@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #0f0f0f;
+        color: #ffffff;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background: linear-gradient(135deg, #1a0033 0%, #2a003f 100%);
+        padding: 40px 50px;
+        border-radius: 16px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(92, 26, 155, 0.2);
+        border: 1px solid rgba(192, 132, 252, 0.1);
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+      }
+
+      .logo img {
+        height: 50px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #e9d5ff;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        color: #d8b4fe;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .code {
+        font-family: "Courier New", monospace;
+        font-size: 28px;
+        font-weight: bold;
+        background: rgba(123, 44, 191, 0.2);
+        color: #f3e8ff;
+        padding: 18px 30px;
+        border-radius: 12px;
+        margin: 25px 0;
+        display: inline-block;
+        letter-spacing: 3px;
+        border: 1px solid rgba(192, 132, 252, 0.3);
+        box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #7e22ce 50%,
+          transparent 100%
+        );
+        margin: 25px 0;
+      }
+
+      .footer {
+        font-size: 13px;
+        color: #a78bfa;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dv70tsyz2/image/upload/v1749018368/tevah-icon_mdogur.png"
+          alt="Tevah Logo"
+        />
+      </div>
+
+      <h1>Email Verification</h1>
+      <p>Hi <%= firstName %>,</p>
+      <p>Use the code below to verify your email address:</p>
+
+      <div class="code"><%= code %></div>
+
+      <p>
+        This code will expire in 15 minutes. If you didn't request this, please
+        ignore this message.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="footer">
+        <p style="margin: 0">
+          23A, Bashorun Okusanya Street, Off Admiralty Road, Off Admiralty Wy,
+          Lekki Phase 1, Lagos
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

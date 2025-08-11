@@ -1,0 +1,22 @@
+# .gitignore
+.env
+.env.*
+*.env
+config/*.json  # if you keep keys there
+
+# Firebase service account files
+**/firebase-adminsdk-*.json
+**/tevah-app-*-firebase-adminsdk-*.json
+**/*-firebase-adminsdk-*.json
+
+# Other sensitive files
+*.pem
+*.key
+*.p12
+*.pfx
+
+.DS_Store
+dist/.DS_Store
+node_modules/.DS_Store
+node_modules/react-native/.DS_Store
+node_modules

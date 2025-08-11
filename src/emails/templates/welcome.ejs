@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #0f0f0f;
+        color: #ffffff;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background: linear-gradient(135deg, #1a0033 0%, #2a003f 100%);
+        padding: 40px 50px;
+        border-radius: 16px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(92, 26, 155, 0.2);
+        border: 1px solid rgba(192, 132, 252, 0.1);
+        text-align: center;
+      }
+      h1 {
+        color: #e9d5ff;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+      }
+      p {
+        color: #d8b4fe;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 0;
+      }
+      .logo img {
+        height: 60px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #7e22ce 50%,
+          transparent 100%
+        );
+        margin: 25px 0;
+      }
+      .footer {
+        font-size: 14px;
+        color: #a78bfa;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dv70tsyz2/image/upload/v1749018368/tevah-icon_mdogur.png"
+          alt="Tevah Logo"
+        />
+      </div>
+
+      <h1>Welcome, <%= firstName %> <span style="color: #c084fc">🎉</span></h1>
+      <p>
+        Thanks for joining Tevah! We're excited to have you on board and can't
+        wait to see what we'll accomplish together.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="footer">
+        <p style="margin: 0; font-size: 13px; color: #8b5cf6">
+          23A, Bashorun Okusanya Street, Off Admiralty Road, Off Admiralty Wy,
+          Lekki Phase 1, Lagos
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

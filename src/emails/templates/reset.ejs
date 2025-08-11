@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #0f0f0f;
+        color: #ffffff;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background: linear-gradient(135deg, #1a0033 0%, #2a003f 100%);
+        padding: 40px 50px;
+        border-radius: 16px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(92, 26, 155, 0.2);
+        border: 1px solid rgba(192, 132, 252, 0.1);
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+      }
+
+      .logo svg {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #e9d5ff;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        color: #d8b4fe;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 16px 40px;
+        margin: 25px 0;
+        font-size: 16px;
+        background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #7e22ce 50%,
+          transparent 100%
+        );
+        margin: 25px 0;
+      }
+
+      .footer {
+        font-size: 13px;
+        color: #a78bfa;
+        margin-top: 20px;
+      }
+
+      .warning {
+        font-size: 14px;
+        color: #f0abfc;
+        margin-top: 25px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dv70tsyz2/image/upload/v1749018368/tevah-icon_mdogur.png"
+          alt="Tevah Logo"
+        />
+      </div>
+
+      <h1>Password Reset</h1>
+      <p>Hi <%= firstName %>,</p>
+      <p>
+        We received a request to reset your password. Click the button below to
+        proceed:
+      </p>
+
+      <a href="<%= resetLink %>" class="button">Reset Password</a>
+
+      <p class="warning">
+        This link will expire in 1 hour. For security reasons, please don't
+        share it with anyone.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="footer">
+        <p style="margin: 0">
+          23A, Bashorun Okusanya Street, Off Admiralty Road, Off Admiralty Wy,
+          Lekki Phase 1, Lagos
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
