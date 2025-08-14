@@ -26,6 +26,8 @@ const bookmarks_routes_1 = __importDefault(require("./routes/bookmarks.routes"))
 const interaction_routes_1 = __importDefault(require("./routes/interaction.routes"));
 const contentInteraction_routes_1 = __importDefault(require("./routes/contentInteraction.routes"));
 const aiChatbot_routes_1 = __importDefault(require("./routes/aiChatbot.routes"));
+const trending_routes_1 = __importDefault(require("./routes/trending.routes"));
+const userProfile_routes_1 = __importDefault(require("./routes/userProfile.routes"));
 // import datingRoutes from "./routes/dating.route";
 // Import services and utilities
 const socket_service_1 = __importDefault(require("./service/socket.service"));
@@ -72,7 +74,7 @@ app.use((req, res, next) => {
     // Log request
     logger_1.default.info("Incoming request", {
         method: req.method,
-        url: req.url,
+        url: req.originalUrl,
         ip: req.ip,
         userAgent: req.get("User-Agent"),
         userId: req.userId || "anonymous",
@@ -122,6 +124,8 @@ app.use("/api/bookmarks", bookmarks_routes_1.default);
 app.use("/api/interactions", interaction_routes_1.default);
 app.use("/api/content", contentInteraction_routes_1.default);
 app.use("/api/ai-chatbot", aiChatbot_routes_1.default);
+app.use("/api/trending", trending_routes_1.default);
+app.use("/api/user-profiles", userProfile_routes_1.default);
 // Add a simple test route
 app.get("/api/test", (req, res) => {
     res.json({
@@ -148,7 +152,7 @@ app.use((error, req, res, next) => {
         error: error.message,
         stack: error.stack,
         method: req.method,
-        url: req.url,
+        url: req.originalUrl,
         userId: req.userId || "anonymous",
     });
     // Don't leak error details in production

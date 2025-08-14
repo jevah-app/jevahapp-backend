@@ -23,6 +23,8 @@ import bookmarksRoutes from "./routes/bookmarks.routes";
 import interactionRoutes from "./routes/interaction.routes";
 import contentInteractionRoutes from "./routes/contentInteraction.routes";
 import aiChatbotRoutes from "./routes/aiChatbot.routes";
+import trendingRoutes from "./routes/trending.routes";
+import userProfileRoutes from "./routes/userProfile.routes";
 // import datingRoutes from "./routes/dating.route";
 
 // Import services and utilities
@@ -79,7 +81,7 @@ app.use((req, res, next) => {
   // Log request
   logger.info("Incoming request", {
     method: req.method,
-    url: req.url,
+    url: req.originalUrl,
     ip: req.ip,
     userAgent: req.get("User-Agent"),
     userId: req.userId || "anonymous",
@@ -139,6 +141,8 @@ app.use("/api/bookmarks", bookmarksRoutes);
 app.use("/api/interactions", interactionRoutes);
 app.use("/api/content", contentInteractionRoutes);
 app.use("/api/ai-chatbot", aiChatbotRoutes);
+app.use("/api/trending", trendingRoutes);
+app.use("/api/user-profiles", userProfileRoutes);
 
 // Add a simple test route
 app.get("/api/test", (req, res) => {
@@ -175,7 +179,7 @@ app.use(
       error: error.message,
       stack: error.stack,
       method: req.method,
-      url: req.url,
+      url: req.originalUrl,
       userId: req.userId || "anonymous",
     });
 

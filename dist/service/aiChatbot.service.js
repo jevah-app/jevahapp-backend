@@ -286,9 +286,10 @@ Please provide a compassionate, biblical response that includes:
             health_guidance: "I understand you have health concerns. While I can offer spiritual support, please consult with healthcare professionals for medical advice. Remember that your body is a temple of the Holy Spirit (1 Corinthians 6:19-20), and God cares about your well-being.",
             relationship_counseling: "Relationships can be challenging, but God provides wisdom for all our interactions. Remember to love others as Christ loved us (John 13:34) and to be patient, kind, and forgiving. Prayer and seeking God's guidance can help in any relationship situation.",
             spiritual_guidance: "Spiritual growth is a journey that requires daily commitment. Spend time in prayer, read Scripture regularly, and connect with your church community. As James 4:8 says, 'Come near to God and he will come near to you.'",
-            general_counseling: "I'm here to provide biblical guidance and spiritual support. God's Word offers wisdom for every situation in life. Remember that you are loved by God and He has a plan for your life (Jeremiah 29:11)."
+            general_counseling: "I'm here to provide biblical guidance and spiritual support. God's Word offers wisdom for every situation in life. Remember that you are loved by God and He has a plan for your life (Jeremiah 29:11).",
         };
-        return responses[messageType] || responses.general_counseling;
+        return (responses[messageType] ||
+            responses.general_counseling);
     }
     /**
      * Extract emotional support from AI response

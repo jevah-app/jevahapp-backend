@@ -9,13 +9,21 @@ const swaggerOptions = {
     openapi: "3.0.0",
     info: {
       title: "Jevah API",
-      version: "1.0.0",
+      version: "2.0.0",
       description: `
-        # Jevah - Gospel Media Platform API
+        # Jevah - Gospel Media Platform API v2.0
         
         A comprehensive API for a gospel media platform featuring:
         
-        ## Features
+        ## 🚀 New Features in v2.0
+        - **AI Biblical Counseling**: Intelligent chatbot for spiritual guidance
+        - **Enhanced Analytics**: Comprehensive trending and user analytics
+        - **Live Recording**: Record and manage live stream recordings
+        - **Advanced Media Interactions**: Duration tracking, downloads, and sharing
+        - **User Profiles**: Enhanced user profile management
+        - **Real-time Features**: Socket.IO powered interactions
+        
+        ## Core Features
         - **User Management**: Registration, authentication, profile management
         - **Media Management**: Upload, stream, and manage gospel content
         - **Live Streaming**: Real-time streaming with Contabo infrastructure
@@ -38,7 +46,11 @@ const swaggerOptions = {
         - Typing indicators
         
         ## Rate Limiting
-        API endpoints are rate-limited to ensure fair usage and prevent abuse.
+        API endpoints are rate-limited to ensure fair usage and prevent abuse:
+        - Authentication: 5 requests per 15 minutes
+        - Media uploads: 10 requests per hour
+        - Media interactions: 100 requests per 15 minutes
+        - AI Chatbot: 20 messages per minute
         
         ## Error Handling
         All endpoints return consistent error responses with appropriate HTTP status codes.
@@ -347,6 +359,228 @@ const swaggerOptions = {
           },
         },
 
+        // AI Chatbot schemas
+        ChatMessage: {
+          type: "object",
+          properties: {
+            id: {
+              type: "string",
+              description: "Message unique identifier",
+            },
+            message: {
+              type: "string",
+              description: "User's message or AI response",
+            },
+            isUser: {
+              type: "boolean",
+              description: "Whether the message is from user or AI",
+            },
+            timestamp: {
+              type: "string",
+              format: "date-time",
+              description: "Message timestamp",
+            },
+          },
+        },
+        AIResponse: {
+          type: "object",
+          properties: {
+            success: {
+              type: "boolean",
+              example: true,
+            },
+            data: {
+              type: "object",
+              properties: {
+                message: {
+                  type: "string",
+                  description: "AI response message",
+                },
+                timestamp: {
+                  type: "string",
+                  format: "date-time",
+                },
+              },
+            },
+          },
+        },
+        ChatbotInfo: {
+          type: "object",
+          properties: {
+            name: {
+              type: "string",
+              example: "Jevah AI Counselor",
+            },
+            description: {
+              type: "string",
+              example: "Biblical counseling and spiritual guidance AI",
+            },
+            capabilities: {
+              type: "array",
+              items: {
+                type: "string",
+              },
+              example: ["Biblical counseling", "Prayer guidance", "Scripture references"],
+            },
+            version: {
+              type: "string",
+              example: "2.0.0",
+            },
+          },
+        },
+        SessionStats: {
+          type: "object",
+          properties: {
+            totalMessages: {
+              type: "number",
+              description: "Total messages in current session",
+            },
+            sessionDuration: {
+              type: "number",
+              description: "Session duration in minutes",
+            },
+            topicsDiscussed: {
+              type: "array",
+              items: {
+                type: "string",
+              },
+              description: "Topics discussed in the session",
+            },
+          },
+        },
+
+        // Trending Analytics schemas
+        TrendingUser: {
+          type: "object",
+          properties: {
+            userId: {
+              type: "string",
+              description: "User's unique identifier",
+            },
+            firstName: {
+              type: "string",
+              description: "User's first name",
+            },
+            lastName: {
+              type: "string",
+              description: "User's last name",
+            },
+            avatar: {
+              type: "string",
+              description: "User's avatar URL",
+            },
+            role: {
+              type: "string",
+              description: "User's role",
+            },
+            stats: {
+              type: "object",
+              properties: {
+                totalViews: {
+                  type: "number",
+                  description: "Total views across all content",
+                },
+                totalInteractions: {
+                  type: "number",
+                  description: "Total interactions (likes, shares, etc.)",
+                },
+                totalContent: {
+                  type: "number",
+                  description: "Total content pieces uploaded",
+                },
+              },
+            },
+          },
+        },
+        TrendingAnalytics: {
+          type: "object",
+          properties: {
+            topCreators: {
+              type: "array",
+              items: {
+                $ref: "#/components/schemas/TrendingUser",
+              },
+              description: "Top content creators",
+            },
+            mostViewedContent: {
+              type: "array",
+              items: {
+                $ref: "#/components/schemas/Media",
+              },
+              description: "Most viewed content",
+            },
+            trendingTopics: {
+              type: "array",
+              items: {
+                type: "string",
+              },
+              description: "Trending topics",
+            },
+            liveStreamStats: {
+              type: "object",
+              properties: {
+                activeStreams: {
+                  type: "number",
+                  description: "Number of active live streams",
+                },
+                totalViewers: {
+                  type: "number",
+                  description: "Total live stream viewers",
+                },
+                peakConcurrentViewers: {
+                  type: "number",
+                  description: "Peak concurrent viewers",
+                },
+              },
+            },
+          },
+        },
+
+        // Recording schemas
+        Recording: {
+          type: "object",
+          properties: {
+            id: {
+              type: "string",
+              description: "Recording unique identifier",
+            },
+            streamId: {
+              type: "string",
+              description: "Associated stream ID",
+            },
+            title: {
+              type: "string",
+              description: "Recording title",
+            },
+            description: {
+              type: "string",
+              description: "Recording description",
+            },
+            status: {
+              type: "string",
+              enum: ["recording", "processing", "completed", "failed"],
+              description: "Recording status",
+            },
+            fileUrl: {
+              type: "string",
+              description: "URL to the recorded file",
+            },
+            duration: {
+              type: "number",
+              description: "Recording duration in seconds",
+            },
+            fileSize: {
+              type: "number",
+              description: "File size in bytes",
+            },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              description: "Recording creation timestamp",
+            },
+          },
+        },
+
         // Comment schemas
         Comment: {
           type: "object",
@@ -429,6 +663,18 @@ const swaggerOptions = {
       {
         name: "Live Streaming",
         description: "Live stream management and real-time features",
+      },
+      {
+        name: "AI Chatbot",
+        description: "AI-powered biblical counseling and spiritual guidance",
+      },
+      {
+        name: "Trending Analytics",
+        description: "Trending content and user analytics",
+      },
+      {
+        name: "Recordings",
+        description: "Live stream recording management",
       },
       {
         name: "Comments",

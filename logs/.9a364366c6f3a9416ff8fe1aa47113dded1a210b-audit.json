@@ -9,6 +9,11 @@
             "date": 1754886682895,
             "name": "/Users/user/Desktop/jevah-app_backend/logs/rejections-2025-08-11.log",
             "hash": "0710606ef7ecff286dff8b3eaff48ad19d83947ef8f9a4d81a5192abeba5d78c"
+        },
+        {
+            "date": 1755155492843,
+            "name": "/Users/user/Desktop/jevah-app_backend/logs/rejections-2025-08-14.log",
+            "hash": "2c75b9fe0a24dbfba4ec1b39394db40d90b323f2ab208e170ac8f0f25c279a09"
         }
     ],
     "hashType": "sha256"
