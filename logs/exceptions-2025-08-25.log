@@ -1,0 +1,23 @@
+2025-08-25 00:17:28 [ERROR]: uncaughtException: clerk is not defined
+ReferenceError: clerk is not defined
+    at Object.<anonymous> (/Users/mac/Desktop/jevahapp-backend/src/utils/clerk.ts:127:1)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._compile (/Users/mac/Desktop/jevahapp-backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/jevahapp-backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1096:12) {"error":{},"exception":true,"date":"Mon Aug 25 2025 00:17:28 GMT+0100 (West Africa Standard Time)","process":{"pid":17769,"uid":501,"gid":20,"cwd":"/Users/mac/Desktop/jevahapp-backend","execPath":"/Users/mac/.nvm/versions/node/v20.19.0/bin/node","version":"v20.19.0","argv":["/Users/mac/.nvm/versions/node/v20.19.0/bin/node","src/index.ts"],"memoryUsage":{"rss":74842112,"heapTotal":40402944,"heapUsed":28603904,"external":20624509,"arrayBuffers":18275943}},"os":{"loadavg":[37.5751953125,14.892578125,14.87841796875],"uptime":192692},"trace":[{"column":1,"file":"/Users/mac/Desktop/jevahapp-backend/src/utils/clerk.ts","function":null,"line":127,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1529,"method":"_compile","native":false},{"column":25,"file":"/Users/mac/Desktop/jevahapp-backend/node_modules/source-map-support/source-map-support.js","function":"Module._compile","line":568,"method":"_compile","native":false},{"column":33,"file":"/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js","function":"Module.m._compile","line":69,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1613,"method":".js","native":false},{"column":20,"file":"/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js","function":"require.extensions..jsx.require.extensions..js","line":114,"method":".js","native":false},{"column":20,"file":"/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js","function":"require.extensions.<computed>","line":71,"method":"<computed>","native":false},{"column":13,"file":"/Users/mac/Desktop/jevahapp-backend/node_modules/ts-node-dev/lib/hook.js","function":"Object.nodeDevHook [as .ts]","line":63,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1275,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":1096,"method":"_load","native":false}]}
+ReferenceError: clerk is not defined
+    at Object.<anonymous> (/Users/mac/Desktop/jevahapp-backend/src/utils/clerk.ts:127:1)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._compile (/Users/mac/Desktop/jevahapp-backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/6l/wncr79kn0rq31qqld_p19ntc0000gn/T/ts-node-dev-hook-8195198739269274.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/jevahapp-backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1096:12)

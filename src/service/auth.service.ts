@@ -115,6 +115,74 @@ class AuthService {
     }
   }
 
+  // async clerkLogin(token: string, userInfo: any) {
+  //   try {
+  //     // Validate input parameters
+  //     if (!token || !userInfo) {
+  //       throw new Error("Token and user information are required");
+  //     }
+
+  //     // Verify Clerk token and extract user data
+  //     const tokenData = await extractUserInfoFromToken(token);
+  //     const validatedUserInfo = validateUserInfo(userInfo);
+
+  //     if (!tokenData.email) {
+  //       throw new Error("Email not found in Clerk token");
+  //     }
+
+  //     // Check if user exists
+  //     let user = await User.findOne({ email: tokenData.email });
+  //     const isNewUser = !user;
+
+  //     if (!user) {
+  //       // Create new user
+  //       user = await User.create({
+  //         email: tokenData.email,
+  //         firstName: validatedUserInfo.firstName,
+  //         lastName: validatedUserInfo.lastName,
+  //         avatar: validatedUserInfo.avatar,
+  //         provider: "clerk",
+  //         clerkId: tokenData.clerkId,
+  //         isEmailVerified: tokenData.emailVerified,
+  //         isProfileComplete: false,
+  //         age: 0,
+  //         isKid: false,
+  //         section: "adults",
+  //         role: "learner",
+  //         hasConsentedToPrivacyPolicy: false,
+  //       });
+
+  //       if (tokenData.emailVerified) {
+  //         await sendWelcomeEmail(user.email, user.firstName || "User");
+  //       }
+  //     } else {
+  //       // Update existing user's Clerk ID if not set
+  //       if (!user.clerkId) {
+  //         user.clerkId = tokenData.clerkId;
+  //         await user.save();
+  //       }
+  //     }
+
+  //     return {
+  //       user: {
+  //         id: user._id,
+  //         email: user.email,
+  //         firstName: user.firstName,
+  //         lastName: user.lastName,
+  //         avatar: user.avatar,
+  //         isProfileComplete: user.isProfileComplete,
+  //         role: user.role,
+  //       },
+  //       needsAgeSelection: !user.age,
+  //       isNewUser,
+  //     };
+  //   } catch (error) {
+  //     console.error("Clerk login error:", error);
+  //     throw error;
+  //   }
+  // }
+
+
   async clerkLogin(token: string, userInfo: any) {
     try {
       // Validate input parameters
@@ -181,6 +249,7 @@ class AuthService {
       throw error;
     }
   }
+
 
   async registerUser(
     email: string,
@@ -509,29 +578,6 @@ class AuthService {
     };
   }
 
-  async verifyEmail(email: string, code: string) {
-    const user = await User.findOne({ email, verificationCode: code });
-    if (!user) {
-      throw new Error("Invalid email or code");
-    }
-
-    if (
-      user.verificationCodeExpires &&
-      user.verificationCodeExpires < new Date()
-    ) {
-      throw new Error("Verification code expired");
-    }
-
-    user.isEmailVerified = true;
-    user.verificationCode = undefined;
-    user.verificationCodeExpires = undefined;
-    await user.save();
-
-    await sendWelcomeEmail(user.email, user.firstName || "User");
-
-    return user;
-  }
-
   async resetPassword(email: string, token: string, newPassword: string) {
     const user = await User.findOne({
       email,
@@ -551,6 +597,8 @@ class AuthService {
 
     return user;
   }
+
+  
 
   async resendVerificationEmail(email: string) {
     const user = await User.findOne({ email, provider: "email" });

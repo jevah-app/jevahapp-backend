@@ -5,12 +5,72 @@ import { User } from "../models/user.model";
 import multer from "multer";
 
 class AuthController {
+  // async clerkLogin(request: Request, response: Response, next: NextFunction) {
+  //   try {
+  //     const { token, userInfo } = request.body;
+
+  //     // Validate required fields
+  //     if (!token) {
+  //       return response.status(400).json({
+  //         success: false,
+  //         message: "Clerk authentication token is required",
+  //       });
+  //     }
+
+  //     if (!userInfo || typeof userInfo !== "object") {
+  //       return response.status(400).json({
+  //         success: false,
+  //         message: "User information object is required",
+  //       });
+  //     }
+
+  //     const result = await authService.clerkLogin(token, userInfo);
+
+  //     return response.status(200).json({
+  //       success: true,
+  //       message: "Clerk login successful",
+  //       user: result.user,
+  //       needsAgeSelection: result.needsAgeSelection,
+  //       isNewUser: result.isNewUser,
+  //     });
+  //   } catch (error: any) {
+  //     console.error("Clerk login error:", error);
+
+  //     // Handle specific error types
+  //     if (error.message.includes("Token")) {
+  //       return response.status(401).json({
+  //         success: false,
+  //         message: "Invalid or expired Clerk token",
+  //       });
+  //     }
+
+  //     if (error.message.includes("email")) {
+  //       return response.status(400).json({
+  //         success: false,
+  //         message: error.message,
+  //       });
+  //     }
+
+  //     return response.status(500).json({
+  //       success: false,
+  //       message: "Authentication failed. Please try again.",
+  //     });
+  //   }
+  // }
+
+
   async clerkLogin(request: Request, response: Response, next: NextFunction) {
     try {
+      console.log('🔍 Clerk login request received:', {
+        body: request.body,
+        headers: request.headers
+      });
+
       const { token, userInfo } = request.body;
 
       // Validate required fields
       if (!token) {
+        console.log('❌ Missing token');
         return response.status(400).json({
           success: false,
           message: "Clerk authentication token is required",
@@ -18,14 +78,17 @@ class AuthController {
       }
 
       if (!userInfo || typeof userInfo !== "object") {
+        console.log('❌ Missing or invalid userInfo:', userInfo);
         return response.status(400).json({
           success: false,
           message: "User information object is required",
         });
       }
 
+      console.log('✅ Input validation passed, calling authService.clerkLogin');
       const result = await authService.clerkLogin(token, userInfo);
 
+      console.log('✅ Clerk login successful:', result);
       return response.status(200).json({
         success: true,
         message: "Clerk login successful",
@@ -34,7 +97,8 @@ class AuthController {
         isNewUser: result.isNewUser,
       });
     } catch (error: any) {
-      console.error("Clerk login error:", error);
+      console.error("❌ Clerk login error:", error);
+      console.error("❌ Error stack:", error.stack);
 
       // Handle specific error types
       if (error.message.includes("Token")) {
@@ -54,6 +118,8 @@ class AuthController {
       return response.status(500).json({
         success: false,
         message: "Authentication failed. Please try again.",
+        error: error.message, // Add this for debugging
+        stack: error.stack    // Add this for debugging
       });
     }
   }

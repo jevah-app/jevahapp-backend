@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/mac/Desktop/jevahapp-backend/logs/.cceb27972f714524de24aa451c56f602b8bddb83-audit.json",
+    "files": [
+        {
+            "date": 1755991932972,
+            "name": "/Users/mac/Desktop/jevahapp-backend/logs/exceptions-2025-08-24.log",
+            "hash": "34304026de7c4fa1a62058e3eacaa733f0a84d3ef72c3347b19a72c971a99869"
+        },
+        {
+            "date": 1756077237918,
+            "name": "/Users/mac/Desktop/jevahapp-backend/logs/exceptions-2025-08-25.log",
+            "hash": "50e8e98212cd27de7037b7c4e5ae2c19a6c38433ecf05bc38a19ca0532cd0bd2"
+        },
+        {
+            "date": 1756164067778,
+            "name": "/Users/mac/Desktop/jevahapp-backend/logs/exceptions-2025-08-26.log",
+            "hash": "7cccf5d3b42fee94364b74ce1f8eacc7f3d692e363a77b199ec6aa48c113f8cb"
+        }
+    ],
+    "hashType": "sha256"
+}

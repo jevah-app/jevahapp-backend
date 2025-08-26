@@ -71,12 +71,12 @@ export const sendVerificationEmail = async (
 export const sendResetPasswordEmail = async (
   email: string,
   firstName: string,
-  resetLink: string
+  code?: string
 ) => {
   return sendEmail({
     to: email,
     subject: "Reset Your Password",
     templateName: "reset",
-    context: { firstName, resetLink },
+    context: code ? { firstName, code } : { firstName },
   });
 };

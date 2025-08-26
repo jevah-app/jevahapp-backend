@@ -115,16 +115,39 @@
       <h1>Password Reset</h1>
       <p>Hi <%= firstName %>,</p>
       <p>
-        We received a request to reset your password. Click the button below to
-        proceed:
+        We received a request to reset your password.
       </p>
 
-      <a href="<%= resetLink %>" class="button">Reset Password</a>
+      <% if (typeof code !== 'undefined' && code) { %>
+        <p>Use the One-Time Password (OTP) below to reset your password:</p>
+        <div
+          style="
+            display: inline-block;
+            padding: 14px 24px;
+            margin: 16px 0;
+            font-size: 24px;
+            letter-spacing: 6px;
+            background: rgba(124, 58, 237, 0.15);
+            color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(192, 132, 252, 0.25);
+          "
+        >
+          <%= String(code) %>
+        </div>
+        <p class="warning">
+          This code expires in 10 minutes. Do not share it with anyone.
+        </p>
+      <% } %>
 
-      <p class="warning">
-        This link will expire in 1 hour. For security reasons, please don't
-        share it with anyone.
-      </p>
+      <% if ((typeof resetLink !== 'undefined') && resetLink) { %>
+        <p>Alternatively, you can click the button below to proceed:</p>
+        <a href="<%= resetLink %>" class="button">Reset Password</a>
+        <p class="warning">
+          This link will expire in 1 hour. For security reasons, please don't
+          share it with anyone.
+        </p>
+      <% } %>
 
       <div class="divider"></div>
 
